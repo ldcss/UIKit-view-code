@@ -42,7 +42,7 @@ class LoginScreen: UIView {
   lazy var descriptionLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.textColor = .white
+    label.textColor = .black
     label.textAlignment = .center
     label.font = UIFont.systemFont(ofSize: 24, weight: .regular)
     label.text = "Au au au au au"
@@ -53,6 +53,7 @@ class LoginScreen: UIView {
     let text = UITextField()
     text.translatesAutoresizingMaskIntoConstraints = false
     text.autocorrectionType = .no
+    text.textColor = .black
     text.backgroundColor = UIColor(named: "cleanWhite")
     text.borderStyle = .roundedRect
     text.keyboardType = .emailAddress
@@ -62,7 +63,6 @@ class LoginScreen: UIView {
         0.4
       )]
     )
-    text.textColor = .black
     text.clipsToBounds = true
     text.layer.cornerRadius = 12
     text.layer.borderWidth = 1
@@ -74,6 +74,7 @@ class LoginScreen: UIView {
     let text = UITextField()
     text.translatesAutoresizingMaskIntoConstraints = false
     text.autocorrectionType = .no
+    text.textColor = .black
     text.backgroundColor = UIColor(named: "cleanWhite")
     text.borderStyle = .roundedRect
     text.keyboardType = .emailAddress
@@ -84,7 +85,6 @@ class LoginScreen: UIView {
         0.4
       )]
     )
-    text.textColor = .black
     text.clipsToBounds = true
     text.layer.cornerRadius = 12
     text.layer.borderWidth = 1
@@ -108,6 +108,7 @@ class LoginScreen: UIView {
     self.addSubview(self.loginLabel)
     self.addSubview(self.descriptionLabel)
     self.addSubview(self.loginTextField)
+    self.addSubview(self.passwordTextField)
     self.addSubview(self.recoverPasswordButton)
     self.configConstraints()
   }
@@ -122,11 +123,6 @@ class LoginScreen: UIView {
       self.subImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
       self.subImageView.topAnchor.constraint(equalTo: self.topAnchor),
       self.subImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-      
-      self.logoAppImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 55),
-      self.logoAppImageView.heightAnchor.constraint(equalToConstant: 120),
-      self.logoAppImageView.widthAnchor.constraint(equalToConstant: 80),
-      self.logoAppImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
       
       self.logoAppImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 55),
       self.logoAppImageView.heightAnchor.constraint(equalToConstant: 120),
@@ -152,7 +148,7 @@ class LoginScreen: UIView {
       
       self.recoverPasswordButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 11),
       self.recoverPasswordButton.trailingAnchor.constraint(equalTo: self.loginTextField.trailingAnchor),
-      self.recoverPasswordButton.heightAnchor.constraint(equalToConstant: 16),
+      self.recoverPasswordButton.heightAnchor.constraint(equalToConstant: 16)
     ])
   }
 }
