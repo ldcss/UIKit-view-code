@@ -59,7 +59,7 @@ class LoginScreen: UIView {
     text.keyboardType = .emailAddress
     text.attributedPlaceholder = NSAttributedString(
       string: "Login",
-      attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(
+      attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(
         0.4
       )]
     )
@@ -80,8 +80,8 @@ class LoginScreen: UIView {
     text.keyboardType = .emailAddress
     text.isSecureTextEntry = true
     text.attributedPlaceholder = NSAttributedString(
-      string: "Login",
-      attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(
+      string: "Senha",
+      attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(
         0.4
       )]
     )
